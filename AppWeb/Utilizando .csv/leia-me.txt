@@ -1,0 +1,1 @@
+Está é a versão do projeto que usa um arquivo .csv para armazenar e recuperar dados do usuário do sistema. Encontra-se finalizada, apenas podendo ter melhorias visuais.
