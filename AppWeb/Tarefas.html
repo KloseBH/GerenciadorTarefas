@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.8.1/font/bootstrap-icons.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <link href="style.css" rel="stylesheet" type="text/css">
+    <script src="Script.js"></script>
+    <title>Tarefas</title>
+</head>
+
+<body>
+    <header>
+        <nav class="navbar mb-2">
+            <div class="container-fluid  d-flex justify-content-center">
+                <span class="navbar-brand mb-0 h1 text-center text-light"><b>TAREFAS PENDENTES</b></span>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!--Formulário para a adição de novas tarefas-->
+        <div class="container">
+            <div class="row d-flex justify-content-center">
+                <form method="post" action="AddTarefa.php">
+                    <div class="row">
+                        <label for="titulo" class="form-label">Título:</label>
+                        <input type="text" class="form-control" id="titulo" name="titulo" maxlength="31" required>
+                    </div>
+                    <br>
+                    <div class="row">
+                        <label for="mensagem" class="form-label">Mensagem:</label>
+                        <textarea class="form-control" id="mensagem" name="mensagem" rows="5" required></textarea>
+                    </div>
+                    <br>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <label for="prioridade" class="form-label">Prioridade:</label>
+                            <select id="prioridade" class="form-select" name="prioridade" required>
+                                <option value="urgente">Urgente</option>
+                                <option value="importante">Importante</option>
+                                <option value="fila">Fila</option>
+                            </select>
+                        </div>
+                        <div class="col-md-6 d-flex justify-content-end">
+                            <button type="submit" class="btn btn-success mt-4">Enviar Solicitação</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <hr>
+
+        <!--Filtro de Situação e Prioridade-->
+        <div class="container">
+            <div class="row">
+                <h1 class="text-decoration-underline">Tarefas</h1>
+            </div>
+            <br>
+            <div class="row">
+                <div class="col-md-3">
+                    <label for="situacao">Situação:</label>
+                    <select id="situacaoFiltro" class="form-select" name="situacao" required>
+                        <option value="todos">Todos</option>
+                        <option value="aberto">Aberto</option>
+                        <option value="fechado">Fechado</option>
+                    </select>
+                </div>
+                <div class="col-md-3">
+                    <label for="prioridade">Prioridade:</label>
+                    <select id="prioridadeFiltro" class="form-select" name="prioridade" required>
+                        <option value="todos">Todos</option>
+                        <option value="urgente">Urgente</option>
+                        <option value="importante">Importante</option>
+                        <option value="fila">Fila</option>
+                    </select>
+                </div>
+            </div>
+            <hr>
+            <div class="row mt-2">
+                <h6><i class="bi bi-circle-fill text-danger"></i> <b>URGENTE</b></h6>
+            </div>
+            <div class="row mt-2">
+                <h6><i class="bi bi-circle-fill text-warning"></i> <b>IMPORTANTE</b></h6>
+            </div>
+            <div class="row mt-2">
+                <h6><i class="bi bi-circle-fill text-success"></i> <b>FILA</b></h6>
+            </div>
+            <hr>
+        </div>
+        <br>
+
+        <!--Conteúdo Principal da Página-->
+        <div class="container" id="main">
+            <!-- Cards de anotações serão carregados aqui -->
+        </div>
+
+        <!-- Modal para exibir detalhes e editar tarefa -->
+        <div class="modal fade" id="modalDetalhesTarefa" tabindex="-1" role="dialog"
+            aria-labelledby="modalDetalhesTarefaLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="modalDetalhesTarefaLabel">Detalhes da Tarefa</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+                    </div>
+                    <div class="modal-body">
+                        <form id="formEditarTarefa">
+                            <input type="hidden" id="modalIdTarefa" name="id">
+                            <div class="form-group">
+                                <label for="modalTitulo" class="col-form-label">Título:</label>
+                                <input type="text" class="form-control" id="modalTitulo" name="titulo">
+                            </div>
+                            <div class="form-group">
+                                <label for="modalMensagem" class="col-form-label">Mensagem:</label>
+                                <textarea class="form-control" id="modalMensagem" name="mensagem"></textarea>
+                            </div>
+                            <div class="form-group">
+                                <label for="modalPrioridade" class="col-form-label">Prioridade:</label>
+                                <select class="form-control" id="modalPrioridade" name="prioridade">
+                                    <option value="urgente">Urgente</option>
+                                    <option value="importante">Importante</option>
+                                    <option value="fila">Fila</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="modalSituacao" class="col-form-label">Situação:</label>
+                                <select class="form-control" id="modalSituacao" name="situacao">
+                                    <option value="aberto">Aberto</option>
+                                    <option value="fechado">Fechado</option>
+                                </select>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                        <button type="button" class="btn btn-primary" id="btnSalvarTarefa">Salvar</button>
+                        <button type="button" class="btn btn-danger" id="btnExcluirTarefa">Excluir</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <footer class="footer bg-dark mb-0 p-2">
+        <span class="h6 text-center text-light d-flex justify-content-center">By Daniel Henrique Alves Bicalho Dias @2024</span>
+    </footer>
+</body>
+
+</html>
