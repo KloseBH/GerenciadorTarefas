@@ -1,0 +1,1 @@
+Está é a versão do projeto que utiliza uma conexão com um banco de dados SQL para armazenar e recuperar dados do usuário do sistema.
