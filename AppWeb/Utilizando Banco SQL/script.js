@@ -12,7 +12,7 @@ $(document).ready(function () {
         $.ajax({
             url: 'CarregarTarefas.php', // URL correta para carregar as tarefas
             type: 'GET',
-            dataType: 'json', // Espera uma resposta JSON
+            dataType: 'json',
             success: function (data) {
                 var main = $('#main');
                 var count = 0;
@@ -99,13 +99,13 @@ $(document).ready(function () {
                         console.log('situacao: ' + situacao);
 
                         $.ajax({
-                            url: 'UpdateTarefa.php', // URL para atualizar a tarefa (ajuste conforme necessário)
+                            url: 'UpdateTarefa.php', // URL para atualizar a tarefa
                             type: 'POST',
                             data: dadosTarefa,
                             success: function (response) {
-                                console.log(response); // Exibe mensagem de sucesso no console
+                                console.log(response); 
                                 $('#modalDetalhesTarefa').modal('hide'); // Fecha o modal
-                                carregarTarefas(); // Recarrega as tarefas após atualizar
+                                carregarTarefas();
                             },
                             error: function (xhr, status, error) {
                                 console.error('Erro na requisição AJAX:', error);
@@ -155,14 +155,10 @@ $(document).ready(function () {
             backdropClass: 'modal-backdrop-custom', // Classe CSS para o backdrop
             scrollable: true,   // Permite rolagem se o conteúdo exceder a altura do modal
             animation: true,    // Ativa animação de entrada
-            //size: 'lg',         // Tamanho grande do modal
-            //content: '<p>Conteúdo personalizado do modal.</p>', // Conteúdo HTML personalizado
-            //dispose: true       // Destrói o modal ao ser fechado
         });
 
         meuModal.show();
     }
 
-    // Chama a função para carregar as tarefas ao carregar a página
     carregarTarefas();
 });

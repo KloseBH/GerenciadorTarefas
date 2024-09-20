@@ -1,1 +1,1 @@
-Essa é a versão web do projeto, que utiliza PHP e por isso é preciso de aplicações como Xampp para poder utilizar o nosso App. Ele continua em desenvolvimento.
+Essa é a versão web do projeto, que utiliza PHP e por isso é preciso de aplicações como Xampp para poder utilizar o meu App. Ele continua em desenvolvimento.

@@ -1,7 +1,16 @@
-1,"Verificar Notas Alecson","Verificar o por que que o Alecson conseguia transmitir notas com cfop de devolução sem chave referênciada. Lucas enviou exemplos no Wpp.",fila,fechado
-2,"Recarregar número final 9603 20/08","Recarregar esse número para não perdermos ele. Pedir ao Xandão para recarregar (tome cuidado, ele sempre tá puto). Recarregar dia 20/08.",fila,aberto
-3,"Nota do Hygor sem transmissão","Tem uma nota com um problema que não consegue ser transmitida. Verificar e tentar resolver a questão.",importante,fechado
-4,"Ver jogo da Epic Games","Entrar na Epic Games e baixar o jogo que tiver",fila,fechado
-5,"Carregador do notebook do Isaac","Achar o carregador do notebook BH-ENGAGEELETRO-02 do Isaac. Olhar histórico do notebook no só resolve. Antes era da Yasmin e depois passou para o Isaac. O Mateus pode ter pego emprestado novamente.",importante,aberto
-6,"Produto problemático sku: 34118","Olhar com o Daniel Duarte a respeito desse produto, pois está muito estranho. E o estoque também está bem esquisito. Ao resolver essa questão, realizar o reenvio conforme orientação da Eliane.Daniel Duarte disse que estava ok, próximo passo é olhar a questão do estoque do reenvio.",urgente,fechado
-7,"MUITO PEDIDO SEM ESTOQUE","Pedidos da Shopee sem estoque do mesmo produto, todo o estoque está em ES, mas os pedidos estão caindo em EX. Primeiro inativamos o produto para não vender e fomos seguindo instruções do Nikolas, que agora está resolvendo.",urgente,fechado
+1,"Pedidos não desceram para o Sys","Verificar e repassar ao Nikolas todos os pedidos que ainda não desceram para o Sysemp.",importante,fechado
+2,"PEDIDOS WEBCONTINENTAL","Pedidos com problemas que ou não caíram no sysemp ou não atualizaram os status.",urgente,fechado
+3,"Transferir faturados da 15 -> 2","Terminar de transferir os faturados da empresa 15 para a 2, após consertar o estoque no sysemp.",importante,fechado
+5,"Carregador do notebook do Isaac","Achar o carregador do notebook BH-ENGAGEELETRO-02 do Isaac. Olhar histórico do notebook no só resolve. Antes era da Yasmin e depois passou para o Isaac. O Mateus pode ter pego emprestado novamente.",fila,fechado
+21,"Pedido sem CPF/CNPJ","O pedido 701-0959392-9682656 da Amazon ES está sem CPF/CNPJ. Solicitei a Débora que conseguisse para mim tal informação. Pedido Cancelado",urgente,fechado
+22,"Pedir para Lucas o Face ID","Pedir para o Lucas o Face ID do mercado pago para podermos logar nas contas do meli.",urgente,fechado
+23,"Pedido da Teiliane e Joy","Pedidos 2000009144446708/2000009147356570/2408269H59P7M2 não foram encontrados no Sysemp e pedi a Yasmin para checar."
+",fila,fechado"
+",fila,fechado"
+",fila,fechado"
+",fila,aberto"
+1,"Pedidos não desceram para o Sys","Verificar e repassar ao Nikolas todos os pedidos que ainda não desceram para o Sysemp.",importante,fechado
+2,"PEDIDOS WEBCONTINENTAL","Pedidos com problemas que ou não caíram no sysemp ou não atualizaram os status.",urgente,fechado
+3,"Transferir faturados da 15 -> 2","Terminar de transferir os faturados da empresa 15 para a 2, após consertar o estoque no sysemp.",importante,fechado
+4,"VERIFICAR CHAMADO INTELIPOST","Verificar o chamado na Intelipost sobre os +300 pedidos que não tiveram atualização de status e por isso sofreram cancelamento. ",fila,fechado
+5,"Criar documento de procedimento","Criar documento de procedimentos, perguntando a cada setor como fazem as atividades e pedir que coloquem prints detalhando. Montar perguntas para cada setor a respeito das tarefas de modo detalhado. ",importante,aberto

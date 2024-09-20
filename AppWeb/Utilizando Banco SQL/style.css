@@ -10,35 +10,35 @@ body{
 
 /* Estilo para todos os cards */
 .card {
-    border-radius: 10px; /* Bordas arredondadas */
-    overflow: hidden; /* Oculta o conteúdo que ultrapassa as bordas */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra sutil para criar profundidade */
-    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transição suave para hover */
-    margin-bottom: 20px; /* Espaçamento inferior entre os cards */
-    max-height:175px; /* Define a altura máxima */
-    min-height:175px; /* Define a altura máxima */
+    border-radius: 10px;
+    overflow: hidden; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+    transition: transform 0.3s ease, box-shadow 0.3s ease; 
+    margin-bottom: 20px; 
+    max-height:175px; 
+    min-height:175px;
 }
 
 /* Efeito de hover para os cards */
 .card:hover:not(.fechado) {
-    transform: translateY(-5px); /* Leve elevação no hover */
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Sombra mais intensa no hover */
+    transform: translateY(-5px); 
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
 }
 
 /* Estilos específicos para as classes de prioridade */
 .importante {
-    background-color: yellow; /* Fundo amarelo */
-    color: #333; /* Texto escuro para contraste */
+    background-color: yellow;
+    color: #333; 
 }
 
 .urgente {
-    background-color: red; /* Fundo vermelho */
-    color: #fff; /* Texto branco para contraste */
+    background-color: red; 
+    color: #fff; 
 }
 
 .fila {
-    background-color: green; /* Fundo verde */
-    color: #fff; /* Texto branco para contraste */
+    background-color: green;
+    color: #fff; 
 }
 
 .fechado{
@@ -47,47 +47,47 @@ body{
 
 /* Estilo para o cabeçalho do card */
 .card-header {
-    font-size: 1.25rem; /* Tamanho da fonte maior para o cabeçalho */
-    font-weight: bold; /* Negrito */
-    padding: 10px 15px; /* Espaçamento interno */
-    border-bottom: 1px solid #ddd; /* Linha separadora */
+    font-size: 1.25rem; 
+    font-weight: bold;
+    padding: 10px 15px;
+    border-bottom: 1px solid #ddd;
 }
 
 /* Estilo para o corpo do card */
 .card-body {
-    padding: 15px; /* Espaçamento interno */
-    font-size: 1rem; /* Tamanho da fonte padrão */
+    padding: 15px;
+    font-size: 1rem;
 }
 
 /* Estilo para o texto do card */
 .card-text {
-    margin: 0; /* Remove margem padrão */
+    margin: 0;
 }
 
 /* Estilo para os botões */
 .btn {
-    border-radius: 5px; /* Bordas arredondadas dos botões */
-    padding: 10px 15px; /* Espaçamento interno */
-    font-size: 0.875rem; /* Tamanho da fonte dos botões */
+    border-radius: 5px;
+    padding: 10px 15px;
+    font-size: 0.875rem;
 }
 
 /* Estilo específico para os botões de ação */
 .btn-danger {
-    background-color: #dc3545; /* Vermelho para o botão de excluir */
-    border: none; /* Remove borda */
+    background-color: #dc3545;
+    border: none;
 }
 
 .btn-danger:hover {
-    background-color: #c82333; /* Tom de vermelho mais escuro no hover */
+    background-color: #c82333;
 }
 
 .btn-success {
-    background-color: #28a745; /* Verde para o botão de abrir */
-    border: none; /* Remove borda */
+    background-color: #28a745;
+    border: none;
 }
 
 .btn-success:hover {
-    background-color: #218838; /* Tom de verde mais escuro no hover */
+    background-color: #218838;
 }
 
 main{
