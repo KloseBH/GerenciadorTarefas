@@ -14,3 +14,4 @@
 3,"Transferir faturados da 15 -> 2","Terminar de transferir os faturados da empresa 15 para a 2, após consertar o estoque no sysemp.",importante,fechado
 4,"VERIFICAR CHAMADO INTELIPOST","Verificar o chamado na Intelipost sobre os +300 pedidos que não tiveram atualização de status e por isso sofreram cancelamento. ",fila,fechado
 5,"Criar documento de procedimento","Criar documento de procedimentos, perguntando a cada setor como fazem as atividades e pedir que coloquem prints detalhando. Montar perguntas para cada setor a respeito das tarefas de modo detalhado. ",importante,aberto
+6,"Recarregar número da TI","Número de telefone: 31 99827-9603",fila,aberto
